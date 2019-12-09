@@ -37,7 +37,4 @@ public class CartServiceImpl implements CartService {
 		
 		cartlineDao.insert(productId, userId);
 	}
-
-
-
 }

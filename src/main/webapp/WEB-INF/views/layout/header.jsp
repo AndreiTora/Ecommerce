@@ -47,7 +47,7 @@
 							
 							<spring:url value="/cart/${product.productId}"
 									var="goCartShop"></spring:url> <a href="${goCartShop}"><button type="button" class="btn btn-primary">Go to your CartShop</button></a>
-							<spring:url value="/logout" var="logoutUrl"></spring:url><br>
+							<spring:url value="/logout" var="logoutUrl"></spring:url><br><br>
 						</c:when>
 						<c:otherwise>
 							<spring:url value="/login" var="loginUrl"></spring:url>

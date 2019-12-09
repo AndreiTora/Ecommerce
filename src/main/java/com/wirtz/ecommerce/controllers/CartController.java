@@ -17,7 +17,6 @@ public class CartController {
 	private final static String CARTLINES_VIEW = "CartShop";
 	private final static String PARAM_PRODUCT_ID = "productId";
 
-	
 	@Autowired 
 	CartService cartService;
 	

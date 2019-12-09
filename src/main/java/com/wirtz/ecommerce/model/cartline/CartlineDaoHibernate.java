@@ -14,8 +14,8 @@ public class CartlineDaoHibernate extends GenericDaoHibernate<Cartline, Long>imp
 
 	@Override
 	public List<Cartline> findCartlinesByUserId(Long id) {
-		String QueryFrom = "FROM Cartline WHERE user = " + id;
 		
+		String QueryFrom = "FROM Cartline WHERE user = " + id;
 		List<Cartline> cartlines = getSession().createQuery(QueryFrom).list();
 	
 		return cartlines;
@@ -23,8 +23,8 @@ public class CartlineDaoHibernate extends GenericDaoHibernate<Cartline, Long>imp
 
 	@Override
 	public void insert(Long productId, Long userId) {
-		String QueryInsert = "INSERT into Cartline (amount, version, productId, userProfileId) values (1, 1, " + productId + ", " + userId + ")";
 		
+		String QueryInsert = "INSERT into Cartline (amount, version, productId, userProfileId) values (1, 1, " + productId + ", " + userId + ")";
 		getSession().createNativeQuery(QueryInsert).executeUpdate();
 	}
 }

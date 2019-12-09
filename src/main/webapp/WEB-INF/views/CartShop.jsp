@@ -17,7 +17,7 @@
 				<th>Name Product:</th>
 				<th>Price:</th>
 				<th>Units:</th>
-				<th>Total price:</th>
+				<th>Total Price:</th>
 			</tr>
 		</thead>
 		
