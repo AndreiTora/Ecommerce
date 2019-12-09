@@ -37,4 +37,14 @@ public class CartServiceImpl implements CartService {
 		
 		cartlineDao.insert(productId, userId);
 	}
+
+	@Override
+	public void update(Long productId, Long userId, Long amount) {
+		cartlineDao.update(productId, userId, amount);
+		
+	}
+
+
+
+	
 }

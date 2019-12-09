@@ -12,4 +12,5 @@ public interface CartService {
 	
 	void insert(Long productId, Long userId);
 	
+	 void update(Long productId, Long userId, Long amount);
 }

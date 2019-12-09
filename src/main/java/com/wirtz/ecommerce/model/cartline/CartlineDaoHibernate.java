@@ -27,4 +27,13 @@ public class CartlineDaoHibernate extends GenericDaoHibernate<Cartline, Long>imp
 		String QueryInsert = "INSERT into Cartline (amount, version, productId, userProfileId) values (1, 1, " + productId + ", " + userId + ")";
 		getSession().createNativeQuery(QueryInsert).executeUpdate();
 	}
+
+	@Override
+	public void update(Long productId, Long userId, Long amount) {
+		// TODO Auto-generated method stub
+		String QueryUpdate = "UPDATE Cartline SET amount = "+ amount +" WHERE productId = " + productId;
+		getSession().createNativeQuery(QueryUpdate).executeUpdate();
+	}
+	
+	
 }
