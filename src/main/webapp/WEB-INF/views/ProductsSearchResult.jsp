@@ -48,7 +48,7 @@
 						<td>${product.price}</td>
 
 						<c:if test="${sessionScope.userProfileId != null}">
-							<td><spring:url value="/cart/${product.productId}"
+							<td><spring:url value="/cart/add/${product.productId}"
 									var="addCartUrl"></spring:url> <a href="${addCartUrl}">Add
 									to cart</a></td>
 						</c:if>

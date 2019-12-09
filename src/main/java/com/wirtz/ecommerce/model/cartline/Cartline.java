@@ -29,12 +29,18 @@ public class Cartline {
 	@JoinColumn(name="userProfileId")
 	private UserProfile user;
 	
+	
+
 	@OneToOne
 	@JoinColumn(name="productId")
 	private Product product;
 	private Long amount;
 	
     private long version;
+    
+	public Cartline() {
+		super();
+	}
 	
 	public Cartline(UserProfile user, Product product, Long amount) {
 		super();
