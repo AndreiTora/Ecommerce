@@ -29,9 +29,12 @@ public class CartlineDaoHibernate extends GenericDaoHibernate<Cartline, Long>imp
 	}
 
 	@Override
-	public void update(Long productId, Long userId, Long amount) {
-		// TODO Auto-generated method stub
-		String QueryUpdate = "UPDATE Cartline SET amount = "+ amount +" WHERE productId = " + productId;
+	public void update(Long cartlineId, Long userId, Long amount) throws InstanceNotFoundException {
+
+		Cartline cartline = find(cartlineId);
+		Long cantidadActualizada = cartline.getAmount() + amount;
+		
+		String QueryUpdate = "UPDATE Cartline SET amount = "+ cantidadActualizada +" WHERE productId = " + cartlineId;
 		getSession().createNativeQuery(QueryUpdate).executeUpdate();
 	}
 	

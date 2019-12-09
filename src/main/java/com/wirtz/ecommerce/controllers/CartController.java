@@ -50,8 +50,8 @@ public class CartController {
 
 	}
 	
-	@GetMapping("cart/update/{productId}/{amount}")
-	public String update(@PathVariable("amount") long amount, @PathVariable(PARAM_PRODUCT_ID) long id) throws InstanceNotFoundException {
+	@GetMapping("cart/update/{cartlineId}/{amount}")
+	public String update(@PathVariable("amount") long amount, @PathVariable("cartlineId") long id) throws InstanceNotFoundException {
 
 		cartService.update(id, (Long) session.getAttribute("userProfileId"), amount);
 

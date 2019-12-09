@@ -39,8 +39,8 @@ public class CartServiceImpl implements CartService {
 	}
 
 	@Override
-	public void update(Long productId, Long userId, Long amount) {
-		cartlineDao.update(productId, userId, amount);
+	public void update(Long cartlineId, Long userId, Long amount) throws InstanceNotFoundException {
+		cartlineDao.update(cartlineId, userId, amount);
 		
 	}
 
