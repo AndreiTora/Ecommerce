@@ -28,10 +28,10 @@
 				<td>${cartline.getProduct().getName()}</td>
 				<td>${cartline.getProduct().getPrice()}</td>
 				<td><spring:url value="/cart/update/${cartline.getCartlineId()}/-1"
-									var="removeOneUrl"></spring:url> <a href="${removeOneUrl}"> <i class="fas fa-minus-circle"></i> </a>
+									var="removeOneUrl"></spring:url> <a href="${removeOneUrl}"> - </a>
 				${cartline.getAmount()} 
 				<spring:url value="/cart/update/${cartline.getCartlineId()}/1"
-									var="addOneUrl"></spring:url> <a href="${addOneUrl}"> <i class="fas fa-plus-circle"></i> </a>
+									var="addOneUrl"></spring:url> <a href="${addOneUrl}"> + </a>
 				</td>	
 				<td>${cartline.getAmount()*cartline.getProduct().getPrice()}</td>
 				<td><spring:url value="/cart/delete/${cartline.getCartlineId()}"

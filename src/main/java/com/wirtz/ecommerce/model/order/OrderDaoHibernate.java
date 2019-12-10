@@ -8,7 +8,7 @@ import com.wirtz.ecommerce.model.cartline.Cartline;
 import com.wirtz.ecommerce.modelutil.dao.GenericDaoHibernate;
 
 @Repository
-public class OrderDaoHibernate extends GenericDaoHibernate<Order, Long> {
+public class OrderDaoHibernate extends GenericDaoHibernate<Order, Long> implements OrderDao {
 
 
 

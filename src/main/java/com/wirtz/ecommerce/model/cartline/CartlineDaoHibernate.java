@@ -34,7 +34,7 @@ public class CartlineDaoHibernate extends GenericDaoHibernate<Cartline, Long>imp
 		Cartline cartline = find(cartlineId);
 		Long cantidadActualizada = cartline.getAmount() + amount;
 		
-		String QueryUpdate = "UPDATE Cartline SET amount = "+ cantidadActualizada +" WHERE productId = " + cartlineId;
+		String QueryUpdate = "UPDATE Cartline SET amount = "+ cantidadActualizada +" WHERE cartlineId = " + cartlineId;
 		getSession().createNativeQuery(QueryUpdate).executeUpdate();
 	}
 	
